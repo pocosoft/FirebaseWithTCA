@@ -2,7 +2,7 @@
 //  FirebaseWithTCATests.swift
 //  FirebaseWithTCATests
 //
-//  Created by 折笠明弘 on 2022/08/02.
+//  Created by Akihiro Orikasa on 2022/08/02.
 //
 
 import XCTest
