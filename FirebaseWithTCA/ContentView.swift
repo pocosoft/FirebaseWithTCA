@@ -10,11 +10,14 @@ import SwiftUI
 
 struct ContentState: Equatable {
     var auth: AuthState?
+    var social: SocialState?
 }
 
 enum ContentAction: Equatable {
     case auth(AuthAction)
     case setNavigationAuth(Bool)
+    case social(SocialAction)
+    case setNavigationSocial(Bool)
 }
 
 let contentReducer = Reducer<ContentState, ContentAction, Environment>.combine(
@@ -23,10 +26,12 @@ let contentReducer = Reducer<ContentState, ContentAction, Environment>.combine(
                                     environment: { $0 }),
     Reducer { state, action, env in
         switch action {
-        case .auth:
+        case .auth, .social:
             break
         case let .setNavigationAuth(isActive):
             state.auth = isActive ? .init() : nil
+        case let .setNavigationSocial(isActive):
+            state.social = isActive ? .init() : nil
         }
         return .none
     }
@@ -41,10 +46,17 @@ struct ContentView: View {
             NavigationView {
                 List {
                     NavigationLink(isActive: viewStore.binding(get: { $0.auth != nil },
-                                                               send: {  ContentAction.setNavigationAuth($0) })) {
+                                                               send: { ContentAction.setNavigationAuth($0) })) {
                         IfLetStore(self.store.scope(state: \.auth, action: ContentAction.auth), then: AuthView.init(store:))
                     } label: {
                         Text("Auth")
+                            .padding()
+                    }
+                    NavigationLink(isActive: viewStore.binding(get: { $0.social != nil },
+                                                               send: { ContentAction.setNavigationSocial($0) })) {
+                        IfLetStore(self.store.scope(state: \.social, action: ContentAction.social), then: SocialView.init(store:))
+                    } label: {
+                        Text("Social login")
                             .padding()
                     }
                 }
