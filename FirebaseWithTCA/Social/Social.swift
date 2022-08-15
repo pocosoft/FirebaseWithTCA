@@ -6,6 +6,7 @@
 //
 
 import ComposableArchitecture
+import FirebaseAuth
 import SwiftUI
 
 struct SocialState: Equatable {

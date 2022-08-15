@@ -21,8 +21,13 @@
 		2576664A2898EE8600E75EC1 /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257666492898EE8600E75EC1 /* AuthClient.swift */; };
 		2576664C2898FE4F00E75EC1 /* Error+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2576664B2898FE4E00E75EC1 /* Error+Extension.swift */; };
 		25E0887A28AA413A0059FD17 /* Social.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0887928AA413A0059FD17 /* Social.swift */; };
+		25E0887D28AA42430059FD17 /* SocialClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0887C28AA42430059FD17 /* SocialClient.swift */; };
+		25E23C2928AA457100913479 /* FirebaseAuthUI in Frameworks */ = {isa = PBXBuildFile; productRef = 25E23C2828AA457100913479 /* FirebaseAuthUI */; };
+		25E23C2B28AA457100913479 /* FirebaseEmailAuthUI in Frameworks */ = {isa = PBXBuildFile; productRef = 25E23C2A28AA457100913479 /* FirebaseEmailAuthUI */; };
+		25E23C2D28AA457100913479 /* FirebaseFacebookAuthUI in Frameworks */ = {isa = PBXBuildFile; productRef = 25E23C2C28AA457100913479 /* FirebaseFacebookAuthUI */; };
+		25E23C2F28AA457100913479 /* FirebaseGoogleAuthUI in Frameworks */ = {isa = PBXBuildFile; productRef = 25E23C2E28AA457100913479 /* FirebaseGoogleAuthUI */; };
+		25E23C3128AA457100913479 /* FirebaseOAuthUI in Frameworks */ = {isa = PBXBuildFile; productRef = 25E23C3028AA457100913479 /* FirebaseOAuthUI */; };
 		36E8D1E3156AA185743741F0 /* Pods_FirebaseWithTCATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 190BB3F7E4BBA1FD36E55493 /* Pods_FirebaseWithTCATests.framework */; };
-		B782BD10178165975DFA802A /* Pods_FirebaseWithTCA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272704D6C6974AF83C445B33 /* Pods_FirebaseWithTCA.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,11 +54,8 @@
 		257666492898EE8600E75EC1 /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
 		2576664B2898FE4E00E75EC1 /* Error+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extension.swift"; sourceTree = "<group>"; };
 		25E0887928AA413A0059FD17 /* Social.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social.swift; sourceTree = "<group>"; };
+		25E0887C28AA42430059FD17 /* SocialClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialClient.swift; sourceTree = "<group>"; };
 		272704D6C6974AF83C445B33 /* Pods_FirebaseWithTCA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseWithTCA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6FAD731A86495B48B8E3EEE6 /* Pods-FirebaseWithTCA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseWithTCA.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseWithTCA/Pods-FirebaseWithTCA.debug.xcconfig"; sourceTree = "<group>"; };
-		9E965FE6CB4381AE6CD6D439 /* Pods-FirebaseWithTCATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseWithTCATests.release.xcconfig"; path = "Target Support Files/Pods-FirebaseWithTCATests/Pods-FirebaseWithTCATests.release.xcconfig"; sourceTree = "<group>"; };
-		F34C2036AD90042075D1A3CC /* Pods-FirebaseWithTCA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseWithTCA.release.xcconfig"; path = "Target Support Files/Pods-FirebaseWithTCA/Pods-FirebaseWithTCA.release.xcconfig"; sourceTree = "<group>"; };
-		FC098C3FC6BD3A94A61FA4E4 /* Pods-FirebaseWithTCATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseWithTCATests.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseWithTCATests/Pods-FirebaseWithTCATests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +63,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25E23C2B28AA457100913479 /* FirebaseEmailAuthUI in Frameworks */,
 				2576663A2898EB0E00E75EC1 /* ComposableArchitecture in Frameworks */,
+				25E23C2F28AA457100913479 /* FirebaseGoogleAuthUI in Frameworks */,
 				2576663F2898EB8400E75EC1 /* FirebaseAuthCombine-Community in Frameworks */,
+				25E23C2D28AA457100913479 /* FirebaseFacebookAuthUI in Frameworks */,
 				2576663D2898EB8400E75EC1 /* FirebaseAuth in Frameworks */,
 				257666412898EB8400E75EC1 /* FirebaseDynamicLinks in Frameworks */,
-				B782BD10178165975DFA802A /* Pods_FirebaseWithTCA.framework in Frameworks */,
+				25E23C3128AA457100913479 /* FirebaseOAuthUI in Frameworks */,
+				25E23C2928AA457100913479 /* FirebaseAuthUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +92,6 @@
 				2576660D2898EAAC00E75EC1 /* FirebaseWithTCA */,
 				2576661E2898EAAD00E75EC1 /* FirebaseWithTCATests */,
 				2576660C2898EAAC00E75EC1 /* Products */,
-				AAF6A54812D6A6F75A428BDB /* Pods */,
 				8AFD3E4C1466958782C4CF14 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				25E0887928AA413A0059FD17 /* Social.swift */,
+				25E0887C28AA42430059FD17 /* SocialClient.swift */,
 			);
 			path = Social;
 			sourceTree = "<group>";
@@ -157,17 +163,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AAF6A54812D6A6F75A428BDB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6FAD731A86495B48B8E3EEE6 /* Pods-FirebaseWithTCA.debug.xcconfig */,
-				F34C2036AD90042075D1A3CC /* Pods-FirebaseWithTCA.release.xcconfig */,
-				FC098C3FC6BD3A94A61FA4E4 /* Pods-FirebaseWithTCATests.debug.xcconfig */,
-				9E965FE6CB4381AE6CD6D439 /* Pods-FirebaseWithTCATests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,12 +170,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2576662F2898EAAD00E75EC1 /* Build configuration list for PBXNativeTarget "FirebaseWithTCA" */;
 			buildPhases = (
-				778E0772F267808F95A9AF81 /* [CP] Check Pods Manifest.lock */,
 				257666072898EAAC00E75EC1 /* Sources */,
 				257666082898EAAC00E75EC1 /* Frameworks */,
 				257666092898EAAC00E75EC1 /* Resources */,
-				AC64151FD99CF2588C0234F4 /* [CP] Embed Pods Frameworks */,
-				CCF366B730D78ACA910E2B52 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,6 +184,11 @@
 				2576663C2898EB8400E75EC1 /* FirebaseAuth */,
 				2576663E2898EB8400E75EC1 /* FirebaseAuthCombine-Community */,
 				257666402898EB8400E75EC1 /* FirebaseDynamicLinks */,
+				25E23C2828AA457100913479 /* FirebaseAuthUI */,
+				25E23C2A28AA457100913479 /* FirebaseEmailAuthUI */,
+				25E23C2C28AA457100913479 /* FirebaseFacebookAuthUI */,
+				25E23C2E28AA457100913479 /* FirebaseGoogleAuthUI */,
+				25E23C3028AA457100913479 /* FirebaseOAuthUI */,
 			);
 			productName = FirebaseWithTCA;
 			productReference = 2576660B2898EAAC00E75EC1 /* FirebaseWithTCA.app */;
@@ -247,6 +244,7 @@
 			packageReferences = (
 				257666382898EB0E00E75EC1 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				2576663B2898EB8400E75EC1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				25E23C2728AA457100913479 /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */,
 			);
 			productRefGroup = 2576660C2898EAAC00E75EC1 /* Products */;
 			projectDirPath = "";
@@ -301,62 +299,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		778E0772F267808F95A9AF81 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FirebaseWithTCA-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AC64151FD99CF2588C0234F4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FirebaseWithTCA/Pods-FirebaseWithTCA-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FirebaseWithTCA/Pods-FirebaseWithTCA-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FirebaseWithTCA/Pods-FirebaseWithTCA-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CCF366B730D78ACA910E2B52 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FirebaseWithTCA/Pods-FirebaseWithTCA-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FirebaseWithTCA/Pods-FirebaseWithTCA-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FirebaseWithTCA/Pods-FirebaseWithTCA-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -366,6 +308,7 @@
 			files = (
 				2576664A2898EE8600E75EC1 /* AuthClient.swift in Sources */,
 				257666112898EAAC00E75EC1 /* ContentView.swift in Sources */,
+				25E0887D28AA42430059FD17 /* SocialClient.swift in Sources */,
 				25E0887A28AA413A0059FD17 /* Social.swift in Sources */,
 				2576660F2898EAAC00E75EC1 /* FirebaseWithTCAApp.swift in Sources */,
 				257666442898EC7B00E75EC1 /* AuthView.swift in Sources */,
@@ -508,7 +451,6 @@
 		};
 		257666302898EAAD00E75EC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6FAD731A86495B48B8E3EEE6 /* Pods-FirebaseWithTCA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -538,7 +480,6 @@
 		};
 		257666312898EAAD00E75EC1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F34C2036AD90042075D1A3CC /* Pods-FirebaseWithTCA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -568,7 +509,6 @@
 		};
 		257666332898EAAD00E75EC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC098C3FC6BD3A94A61FA4E4 /* Pods-FirebaseWithTCATests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -589,7 +529,6 @@
 		};
 		257666342898EAAD00E75EC1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E965FE6CB4381AE6CD6D439 /* Pods-FirebaseWithTCATests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -657,6 +596,14 @@
 				kind = branch;
 			};
 		};
+		25E23C2728AA457100913479 /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/FirebaseUI-iOS";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -679,6 +626,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2576663B2898EB8400E75EC1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDynamicLinks;
+		};
+		25E23C2828AA457100913479 /* FirebaseAuthUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25E23C2728AA457100913479 /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */;
+			productName = FirebaseAuthUI;
+		};
+		25E23C2A28AA457100913479 /* FirebaseEmailAuthUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25E23C2728AA457100913479 /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */;
+			productName = FirebaseEmailAuthUI;
+		};
+		25E23C2C28AA457100913479 /* FirebaseFacebookAuthUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25E23C2728AA457100913479 /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */;
+			productName = FirebaseFacebookAuthUI;
+		};
+		25E23C2E28AA457100913479 /* FirebaseGoogleAuthUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25E23C2728AA457100913479 /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */;
+			productName = FirebaseGoogleAuthUI;
+		};
+		25E23C3028AA457100913479 /* FirebaseOAuthUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25E23C2728AA457100913479 /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */;
+			productName = FirebaseOAuthUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
