@@ -65,7 +65,7 @@ struct SocialView: View {
 struct Social_Previews: PreviewProvider {
     static var previews: some View {
         SocialView(store: .init(initialState: .init(),
-                                                        reducer: SocialReducer,
-                                                        environment: .init()))
+                                reducer: SocialReducer,
+                                environment: .init()))
     }
 }

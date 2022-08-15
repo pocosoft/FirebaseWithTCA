@@ -55,6 +55,7 @@
 		2576664B2898FE4E00E75EC1 /* Error+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extension.swift"; sourceTree = "<group>"; };
 		25E0887928AA413A0059FD17 /* Social.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social.swift; sourceTree = "<group>"; };
 		25E0887C28AA42430059FD17 /* SocialClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialClient.swift; sourceTree = "<group>"; };
+		25E23C3228AA4BD100913479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		272704D6C6974AF83C445B33 /* Pods_FirebaseWithTCA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseWithTCA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -108,6 +109,7 @@
 		2576660D2898EAAC00E75EC1 /* FirebaseWithTCA */ = {
 			isa = PBXGroup;
 			children = (
+				25E23C3228AA4BD100913479 /* Info.plist */,
 				257666472898ECDB00E75EC1 /* GoogleService-Info.plist */,
 				257666422898EB8F00E75EC1 /* Auth */,
 				25E0887B28AA41520059FD17 /* Social */,
@@ -460,6 +462,7 @@
 				DEVELOPMENT_TEAM = KK8AJMY46V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FirebaseWithTCA/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -489,6 +492,7 @@
 				DEVELOPMENT_TEAM = KK8AJMY46V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FirebaseWithTCA/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
