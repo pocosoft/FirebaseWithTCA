@@ -7,16 +7,26 @@
 
 import ComposableArchitecture
 import FirebaseAuth
+import FirebaseAuthUI
 import SwiftUI
 
 struct SocialState: Equatable {
 }
 
 enum SocialAction: Equatable {
+    case signInWithGoogle
+    case signInWithApple
+    case signinWithFacebook
 }
 
 let SocialReducer = Reducer<SocialState, SocialAction, SocialEnvironment> { state, action, env in
     switch action {
+    case .signInWithGoogle:
+        break
+    case .signInWithApple:
+        break
+    case .signinWithFacebook:
+        break
     }
     return .none
 }
@@ -28,7 +38,26 @@ struct SocialView: View {
     let store: Store<SocialState, SocialAction>
     var body: some View {
         WithViewStore(store) { viewStore in
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            VStack {
+                Button {
+                    viewStore.send(.signInWithGoogle)
+                } label: {
+                    Text("Sign in with Google")
+                        .padding()
+                }
+                Button {
+                    viewStore.send(.signInWithApple)
+                } label: {
+                    Text("Sign in with Apple")
+                        .padding()
+                }
+                Button {
+                    viewStore.send(.signinWithFacebook)
+                } label: {
+                    Text("Sign in with Facebook")
+                        .padding()
+                }
+            }
         }
     }
 }
