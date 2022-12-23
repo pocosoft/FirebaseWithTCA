@@ -10,18 +10,18 @@ import SwiftUI
 
 struct Content: ReducerProtocol {
   struct State: Equatable {
-    var auth: AuthState?
+    var auth: Auth.State?
   }
   enum Action: Equatable {
-    case auth(AuthAction)
+    case auth(Auth.Action)
     case setNavigationAuth(Bool)
   }
   func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
     switch action {
     case .auth:
-        break
+      break
     case let .setNavigationAuth(isActive):
-        state.auth = isActive ? .init() : nil
+      state.auth = isActive ? .init() : nil
     }
     return .none
   }
@@ -35,7 +35,7 @@ struct ContentView: View {
         List {
           NavigationLink(isActive: viewStore.binding(get: { $0.auth != nil },
                                                      send: {  Content.Action.setNavigationAuth($0) })) {            
-            IfLetStore(self.store.scope(state: \.auth, action: Content.Action.auth), then: AuthView.init(store:))
+            IfLetStore(store.scope(state: \.auth, action: Content.Action.auth), then: AuthView.init(store:))
           } label: {
             Text("Auth")
               .padding()
@@ -50,7 +50,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(store: .init(initialState: .init(),
-                                 reducer: Content()))
+      ContentView(store: .init(initialState: .init(),
+                               reducer: Content()))
     }
 }
