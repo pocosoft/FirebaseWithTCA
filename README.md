@@ -1,6 +1,5 @@
 # FirebaseWithTCA
-Implement Firebase Authentication using [TCA](https://github.com/pointfreeco/swift-composable-architecture)
-The operation was checked in the following environment.
+Implement Firebase Authentication using [TCA](https://github.com/pointfreeco/swift-composable-architecture). The operation was checked in the following environment.
 
 - Xcode 14.2
 - iOS 16.2
