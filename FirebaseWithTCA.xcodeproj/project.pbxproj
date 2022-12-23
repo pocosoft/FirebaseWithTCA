@@ -34,16 +34,16 @@
 
 /* Begin PBXFileReference section */
 		2576660B2898EAAC00E75EC1 /* FirebaseWithTCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseWithTCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2576660E2898EAAC00E75EC1 /* FirebaseWithTCAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseWithTCAApp.swift; sourceTree = "<group>"; };
-		257666102898EAAC00E75EC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2576660E2898EAAC00E75EC1 /* FirebaseWithTCAApp.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = FirebaseWithTCAApp.swift; sourceTree = "<group>"; tabWidth = 2; };
+		257666102898EAAC00E75EC1 /* ContentView.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; tabWidth = 2; };
 		257666122898EAAD00E75EC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		257666152898EAAD00E75EC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2576661B2898EAAD00E75EC1 /* FirebaseWithTCATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebaseWithTCATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2576661F2898EAAD00E75EC1 /* FirebaseWithTCATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseWithTCATests.swift; sourceTree = "<group>"; };
-		257666432898EC7B00E75EC1 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		257666432898EC7B00E75EC1 /* AuthView.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; tabWidth = 2; };
 		257666472898ECDB00E75EC1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		257666492898EE8600E75EC1 /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
-		2576664B2898FE4E00E75EC1 /* Error+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extension.swift"; sourceTree = "<group>"; };
+		257666492898EE8600E75EC1 /* AuthClient.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; tabWidth = 2; };
+		2576664B2898FE4E00E75EC1 /* Error+Extension.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = "Error+Extension.swift"; sourceTree = "<group>"; tabWidth = 2; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
