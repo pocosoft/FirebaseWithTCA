@@ -3,5 +3,6 @@ Implement Firebase Authentication using [TCA](https://github.com/pointfreeco/swi
 
 - Xcode 14.2
 - iOS 16.2
+- swift-composable-architecture 0.47.2
 
 If you want to make sure it works, create a GoogleService-Info.plist and embed it.
