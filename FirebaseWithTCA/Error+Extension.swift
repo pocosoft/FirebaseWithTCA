@@ -8,17 +8,17 @@
 import ComposableArchitecture
 
 extension Error where Self == AuthClient.Failure {
-    func alertState<Action>(dismissAction: Action) -> AlertState<Action> {
-        .init(title: .init("Failed"),
-              message: .init(self.message),
-              dismissButton: .default(.init("OK"), action: .send(dismissAction)))
-    }
+  func alertState<Action>(dismissAction: Action) -> AlertState<Action> {
+    .init(title: .init("Failed"),
+          message: .init(self.message),
+          dismissButton: .default(.init("OK"), action: .send(dismissAction)))
+  }
 }
 
 extension Error {
-    func alertState<Action>(dismissAction: Action) -> AlertState<Action> {
-        .init(title: .init("Failed"),
-              message: .init("Encountered some kind of error."),
-              dismissButton: .default(.init("OK"), action: .send(dismissAction)))
-    }
+  func alertState<Action>(dismissAction: Action) -> AlertState<Action> {
+    .init(title: .init("Failed"),
+          message: .init("Encountered some kind of error."),
+          dismissButton: .default(.init("OK"), action: .send(dismissAction)))
+  }
 }
