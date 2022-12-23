@@ -33,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		253CDB3029559D6B00F76485 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		253CDB3129559D6B00F76485 /* LICENCE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENCE; sourceTree = SOURCE_ROOT; };
 		2576660B2898EAAC00E75EC1 /* FirebaseWithTCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseWithTCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2576660E2898EAAC00E75EC1 /* FirebaseWithTCAApp.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = FirebaseWithTCAApp.swift; sourceTree = "<group>"; tabWidth = 2; };
 		257666102898EAAC00E75EC1 /* ContentView.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; tabWidth = 2; };
@@ -71,6 +73,8 @@
 		257666022898EAAC00E75EC1 = {
 			isa = PBXGroup;
 			children = (
+				253CDB3129559D6B00F76485 /* LICENCE */,
+				253CDB3029559D6B00F76485 /* README.md */,
 				2576660D2898EAAC00E75EC1 /* FirebaseWithTCA */,
 				2576661E2898EAAD00E75EC1 /* FirebaseWithTCATests */,
 				2576660C2898EAAC00E75EC1 /* Products */,
