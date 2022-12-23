@@ -16,14 +16,20 @@ struct Content: ReducerProtocol {
     case auth(Auth.Action)
     case setNavigationAuth(Bool)
   }
-  func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
-    switch action {
-    case .auth:
-      break
-    case let .setNavigationAuth(isActive):
-      state.auth = isActive ? .init() : nil
+
+  var body: some ReducerProtocol<State, Action> {
+    Reduce { state, action in
+      switch action {
+      case .auth:
+        break
+      case let .setNavigationAuth(isActive):
+        state.auth = isActive ? .init() : nil
+      }
+      return .none
     }
-    return .none
+    .ifLet(\.auth, action: /Action.auth) {
+      Auth()
+    }
   }
 }
 
