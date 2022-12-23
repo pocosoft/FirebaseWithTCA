@@ -11,28 +11,26 @@ import CombineSchedulers
 
 @main
 struct FirebaseWithTCAApp: App {
-    
-    init() {
-        FirebaseApp.configure()
+  init() {
+    FirebaseApp.configure()
+  }
+  
+  var body: some Scene {
+    WindowGroup {
+      ContentView(store: .init(initialState: .init(),
+                               reducer: Content()))
     }
-    
-    var body: some Scene {
-        WindowGroup {
-            ContentView(store: .init(initialState: .init(),
-                                     reducer: contentReducer,
-                                     environment: .live))
-        }
-    }
+  }
 }
 
 struct Environment {
-    var mainQueue: AnySchedulerOf<DispatchQueue>
-    var authClient: AuthClient
+  var mainQueue: AnySchedulerOf<DispatchQueue>
+  var authClient: AuthClient
 }
 
 extension Environment {
-    static let live = Environment(
-        mainQueue: .main,
-        authClient: .live
-    )
+  static let live = Environment(
+    mainQueue: .main,
+    authClient: .live
+  )
 }

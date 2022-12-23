@@ -8,57 +8,55 @@
 import ComposableArchitecture
 import SwiftUI
 
-struct ContentState: Equatable {
-    var auth: AuthState?
-}
-
-enum ContentAction: Equatable {
-    case auth(AuthAction)
+struct Content: ReducerProtocol {
+  struct State: Equatable {
+    var auth: Auth.State?
+  }
+  enum Action: Equatable {
+    case auth(Auth.Action)
     case setNavigationAuth(Bool)
-}
+  }
 
-let contentReducer = Reducer<ContentState, ContentAction, Environment>.combine(
-    authReducer.optional().pullback(state: \.auth,
-                                    action: /ContentAction.auth,
-                                    environment: { $0 }),
-    Reducer { state, action, env in
-        switch action {
-        case .auth:
-            break
-        case let .setNavigationAuth(isActive):
-            state.auth = isActive ? .init() : nil
-        }
-        return .none
+  var body: some ReducerProtocol<State, Action> {
+    Reduce { state, action in
+      switch action {
+      case .auth:
+        break
+      case let .setNavigationAuth(isActive):
+        state.auth = isActive ? .init() : nil
+      }
+      return .none
     }
-)
+    .ifLet(\.auth, action: /Action.auth) {
+      Auth()
+    }
+  }
+}
 
 struct ContentView: View {
-    
-    let store: Store<ContentState, ContentAction>
-    
-    var body: some View {
-        WithViewStore(store) { viewStore in
-            NavigationView {
-                List {
-                    NavigationLink(isActive: viewStore.binding(get: { $0.auth != nil },
-                                                               send: {  ContentAction.setNavigationAuth($0) })) {
-                        IfLetStore(self.store.scope(state: \.auth, action: ContentAction.auth), then: AuthView.init(store:))
-                    } label: {
-                        Text("Auth")
-                            .padding()
-                    }
-                }
-            }
-            .navigationViewStyle(StackNavigationViewStyle())
-            .navigationTitle("Welcome to FirebaseWithTCA")
+  let store: StoreOf<Content>
+  var body: some View {
+    WithViewStore(self.store, observe: { $0 }) { viewStore in
+      NavigationView {
+        List {
+          NavigationLink(isActive: viewStore.binding(get: { $0.auth != nil },
+                                                     send: {  Content.Action.setNavigationAuth($0) })) {            
+            IfLetStore(store.scope(state: \.auth, action: Content.Action.auth), then: AuthView.init(store:))
+          } label: {
+            Text("Auth")
+              .padding()
+          }
         }
+      }
+      .navigationViewStyle(StackNavigationViewStyle())
+      .navigationTitle("Welcome to FirebaseWithTCA")
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(store: .init(initialState: .init(),
-                                 reducer: contentReducer,
-                                 environment: .live))
+      ContentView(store: .init(initialState: .init(),
+                               reducer: Content()))
     }
 }
