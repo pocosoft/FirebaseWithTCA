@@ -22,15 +22,3 @@ struct FirebaseWithTCAApp: App {
     }
   }
 }
-
-struct Environment {
-  var mainQueue: AnySchedulerOf<DispatchQueue>
-  var authClient: AuthClient
-}
-
-extension Environment {
-  static let live = Environment(
-    mainQueue: .main,
-    authClient: .live
-  )
-}
